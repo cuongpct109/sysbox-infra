@@ -101,13 +101,14 @@ else
 fi
 
 # Download datastack from https://drive.google.com/drive/u/0/folders/17i0jINA19m9PZ1u292Tht5lm5sZIWhcm
-wget --load-cookies ~/Downloads/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies ~/Downloads/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1tJJiMOaYtmzSskWq1EGgCOmR6J3VZFqs' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1tJJiMOaYtmzSskWq1EGgCOmR6J3VZFqs" -O ~/Downloads/datastack.tar.gz && rm ~/Downloads/cookies.txt
+mkdir ~/Documents/dbs
+
+wget --load-cookies ~/Downloads/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies ~/Downloads/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1a1OrSlhVYpJR4AthTnT-iEf0FFcPhj-3' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1a1OrSlhVYpJR4AthTnT-iEf0FFcPhj-3" -O ~/Documents/dbs/dbs.tar.gz && rm ~/Downloads/cookies.txt
 
 # Unzip datastack.tar.gz
-cd ~/Downloads && tar -xvf datastack.tar.gz && git clone https://gitlab.com/ultorex/skipid/backend/dbs.git ~/Documents/dbs
-echo "starting copy from datastack to dbs'
-cp -rf ~/Downloads/DataStack/* ~/Documents/dbs
-echo "finish copy"
+
+cd ~/Documents/dbs && tar -xvf dbs.tar.gz && rm dbs.tar.gz
+
 # Run docker-compose and save logs to ~/Documents/dbs/docker.log
 
 echo "starting docker-compose"
