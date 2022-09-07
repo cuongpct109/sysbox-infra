@@ -101,7 +101,7 @@ fi
 # Download datastack from https://drive.google.com/drive/u/0/folders/17i0jINA19m9PZ1u292Tht5lm5sZIWhcm
 mkdir ~/Documents/dbs
 
-wget --load-cookies ~/Downloads/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies ~/Downloads/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1a1OrSlhVYpJR4AthTnT-iEf0FFcPhj-3' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1a1OrSlhVYpJR4AthTnT-iEf0FFcPhj-3" -O ~/Documents/dbs/dbs.tar.gz && rm ~/Downloads/cookies.txt
+wget --load-cookies ~/Downloads/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies ~/Downloads/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1BI_aZmSKWhL45fjHlpfxSo7yx5R2xMgN' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1BI_aZmSKWhL45fjHlpfxSo7yx5R2xMgN" -O ~/Documents/dbs/dbs.tar.gz && rm ~/Downloads/cookies.txt
 
 # Unzip datastack.tar.gz
 
