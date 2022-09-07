@@ -4,6 +4,20 @@
 
 mkdir ~/Downloads ~/Documents
 
+if [ -d ~/Documents ] 
+then
+    :
+else
+    mkdir ~/Documents
+fi
+
+if [ -d ~/Downloads ] 
+then
+    :
+else
+    mkdir ~/Downloads
+fi
+
 curl https://raw.githubusercontent.com/cuongpct109/sysbox-infra/main/shutdown.sh | sh -
 
 # Check and remove existing old folders if needed
@@ -94,9 +108,7 @@ cd ~/Downloads && tar -xvf datastack.tar.gz && git clone https://gitlab.com/ulto
 
 # Run docker-compose and save logs to ~/Documents/dbs/docker.log
 
-sudo docker-compose -f ~/Documents/dbs/docker-compose.yml up > ~/Documents/dbs/docker.log 2>&1 &
-
-tail -f ~/Documents/dbs/docker.log &
+sudo docker-compose -f ~/Documents/dbs/docker-compose.yml up > ~/Documents/dbs/docker.log 2>&1 && echo "mysql, mongo, redis containers started"
 
 # Cleaning up
 
