@@ -2,7 +2,9 @@
 
 # shutdown and removing necessary data
 
-eval "$(curl https://raw.githubusercontent.com/cuongpct109/skipid-infra/main/shutdown.sh)"
+mkdir ~/Downloads ~/Documents
+
+curl https://raw.githubusercontent.com/cuongpct109/skipid-infra/main/shutdown.sh | sh -
 
 # Check and remove existing old folders if needed
 
