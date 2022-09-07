@@ -2,8 +2,6 @@
 
 # shutdown and removing necessary data
 
-mkdir ~/Downloads ~/Documents
-
 if [ -d ~/Documents ] 
 then
     :
