@@ -111,7 +111,7 @@ echo "finish copy"
 # Run docker-compose and save logs to ~/Documents/dbs/docker.log
 
 echo "starting docker-compose"
-sudo docker-compose -f ~/Documents/dbs/docker-compose.yml up > ~/Documents/dbs/docker.log 2>&1 
+sudo docker-compose -f ~/Documents/dbs/docker-compose.yml up > ~/Documents/dbs/docker.log 2>&1 &
 echo "mysql, mongo, redis containers started"
 
 # Cleaning up
