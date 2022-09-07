@@ -104,11 +104,15 @@ fi
 wget --load-cookies ~/Downloads/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies ~/Downloads/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1tJJiMOaYtmzSskWq1EGgCOmR6J3VZFqs' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1tJJiMOaYtmzSskWq1EGgCOmR6J3VZFqs" -O ~/Downloads/datastack.tar.gz && rm ~/Downloads/cookies.txt
 
 # Unzip datastack.tar.gz
-cd ~/Downloads && tar -xvf datastack.tar.gz && git clone https://gitlab.com/ultorex/skipid/backend/dbs.git ~/Documents/dbs && cp -rf ~/Downloads/DataStack/* ~/Documents/dbs
-
+cd ~/Downloads && tar -xvf datastack.tar.gz && git clone https://gitlab.com/ultorex/skipid/backend/dbs.git ~/Documents/dbs
+echo "starting copy from datastack to dbs'
+cp -rf ~/Downloads/DataStack/* ~/Documents/dbs
+echo "finish copy"
 # Run docker-compose and save logs to ~/Documents/dbs/docker.log
 
-sudo docker-compose -f ~/Documents/dbs/docker-compose.yml up > ~/Documents/dbs/docker.log 2>&1 && echo "mysql, mongo, redis containers started"
+echo "starting docker-compose"
+sudo docker-compose -f ~/Documents/dbs/docker-compose.yml up > ~/Documents/dbs/docker.log 2>&1 
+echo "mysql, mongo, redis containers started"
 
 # Cleaning up
 
