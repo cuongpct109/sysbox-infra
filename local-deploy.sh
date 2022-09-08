@@ -1,5 +1,19 @@
 #!/bin/bash
 
+if [ -d ~/Documents ] 
+then
+    :
+else
+    mkdir ~/Documents
+fi
+
+if [ -d ~/Downloads ] 
+then
+    :
+else
+    mkdir ~/Downloads
+fi
+
 # Create .env file in ~/Documents/utilities/ folder
 
 eval "$(curl https://raw.githubusercontent.com/cuongpct109/skipid-infra/main/env-config.sh)"
