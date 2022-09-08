@@ -30,7 +30,9 @@ sudo apt update;
 
 # Installing apache-tomcat-8.0.53, apache-ant-1.9.16 and java1.8-272
 
-curl https://raw.githubusercontent.com/cuongpct109/sysbox-infra/main/install-tomcat-ant-java-node.sh | sh -
+curl https://raw.githubusercontent.com/cuongpct109/sysbox-infra/main/install-tomcat-ant-node.sh | sh -
+
+curl https://raw.githubusercontent.com/cuongpct109/sysbox-infra/main/install-java.sh | sh -
 
 # Clone common and kyc-api source
 
