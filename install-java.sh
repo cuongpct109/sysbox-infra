@@ -1,3 +1,6 @@
+cd ~
+source .bashrc
+
 if [ -d ~/java1.8-272 ] 
 then
   rm -rf ~/java1.8-272
