@@ -16,11 +16,11 @@ fi
 
 # Create .env file in ~/Documents/utilities/ folder
 
-curl https://raw.githubusercontent.com/cuongpct109/skipid-infra/main/env-config.sh | sh -
+curl https://raw.githubusercontent.com/cuongpct109/sysbox-infra/main/env-config.sh | sh -
 
 # Killing port 3000, port 8080 and delete necessary folders
 
-curl https://raw.githubusercontent.com/cuongpct109/skipid-infra/main/prepare-port-folder.sh | sh -
+curl https://raw.githubusercontent.com/cuongpct109/sysbox-infra/main/prepare-port-folder.sh | sh -
 
 # Update
 
@@ -28,7 +28,7 @@ sudo apt update;
 
 # Installing apache-tomcat-8.0.53, apache-ant-1.9.16 and java1.8-272
 
-curl https://raw.githubusercontent.com/cuongpct109/skipid-infra/main/install-tomcat-ant-java-node.sh | sh -
+curl https://raw.githubusercontent.com/cuongpct109/sysbox-infra/main/install-tomcat-ant-java-node.sh | sh -
 
 # Clone common and kyc-api source
 
