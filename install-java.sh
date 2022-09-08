@@ -1,5 +1,4 @@
-cd ~
-source .bashrc
+#!/bin/bash
 
 if [ -d ~/java1.8-272 ] 
 then
@@ -15,7 +14,7 @@ then
   else
     :
   fi
-  source ~/.bashrc
+  . ~/.bashrc
 else
   cd ~ && wget https://builds.openlogic.com/downloadJDK/openlogic-openjdk/8u272-b10/openlogic-openjdk-8u272-b10-linux-x64.tar.gz 
   tar -xvf openlogic-openjdk-8u272-b10-linux-x64.tar.gz 
@@ -28,5 +27,5 @@ else
   else
     :
   fi
-  source ~/.bashrc
+  . ~/.bashrc
 fi
