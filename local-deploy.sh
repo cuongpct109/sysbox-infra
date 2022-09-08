@@ -1,5 +1,7 @@
 #!/bin/bash
 
+curl https://raw.githubusercontent.com/cuongpct109/sysbox-infra/main/shutdown.sh | sh -
+
 if [ -d ~/Documents ] 
 then
     :
