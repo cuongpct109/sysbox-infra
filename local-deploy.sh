@@ -28,7 +28,7 @@ sudo apt update;
 
 # Installing apache-tomcat-8.0.53, apache-ant-1.9.16 and java1.8-272
 
-curl https://raw.githubusercontent.com/cuongpct109/skipid-infra/main/install-tomcat-ant-java.sh | sh -
+curl https://raw.githubusercontent.com/cuongpct109/skipid-infra/main/install-tomcat-ant-java-node.sh | sh -
 
 # Clone common and kyc-api source
 
@@ -62,9 +62,9 @@ cd ~/Documents/skipid/skipid && sed -i s:'https\://staging-api.skipid.io':'http\
 
 
 cd ~/Documents/skipid/skipid
-yarn install
+npm install 
 sudo chmod -R 777 ~/Documents/skipid/skipid/node_modules
-yarn global add serve
+npm install -g serve
 
 # Start tomcat server at port 8080
 
@@ -73,7 +73,7 @@ yarn global add serve
 # Start skipid frontend server at port 3000
 
 cd ~/Documents/skipid/skipid 
-yarn build
+npm run build
 serve -s build -p 3000 &
 
 # Remove .env file in the utilities folder
