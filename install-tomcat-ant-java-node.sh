@@ -2,7 +2,6 @@
 
 # Install java
 
-if [ "$(echo $0)" = "bash" ] || [ "$(echo $0)" = "/bin/bash" ] || [ "$(echo $0)" = "-bash" ]; then
     if [ -d ~/java1.8-272 ] 
     then
         rm -rf ~/java1.8-272
@@ -32,7 +31,7 @@ if [ "$(echo $0)" = "bash" ] || [ "$(echo $0)" = "/bin/bash" ] || [ "$(echo $0)"
         fi
         source ~/.bashrc
     fi
-fi
+
 
 
 # Download apache-tomcat-8.0.53 and apache-ant-1.9.16
